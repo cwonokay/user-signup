@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>Register | Flask</title>
+</head>
+<style>
+    .error { color: red; }
+</style>
+<body>
+    <div class="container">
+        <form action="/signup" method="POST">
+            <h1>Signup</h1>
+            <div class="form">
+                <input type="text" name="username" placeholder="username" class="forml" value='{{username}}'>
+                <div class="error">{{username_error}}</div>
+            </div>
+            <div class="form">
+                <input type="email" name="email" placeholder="email" class="form" value= '{{email}}'>
+                <span class="error">{{email_error}}</span>
+            </div>
+            <div class="form">
+                <input type="password" name="password" placeholder="password" class="form" id="password">
+                <div class="error">{{password_error}}</div>
+            </div>
+            <div class="form">
+                <input type="password" name="confirm" placeholder="confirm password" class="form" id="confirm">
+                <div class="error">{{confirm_error}}</div>
+            </div>
+            <button type="submit" class="btn" id="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
